@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honest feedback app</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+        body {
+  background-color: #d9ebf0;
+  text-align: center;
+  font-family: 'Raleway', Helvetica, sans-serif;
+  min-width: 320px;
+  justify-content: center;
+}
+
+header {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 20px;
+}
+
+button {
+      width: 150px;
+      padding: 10px;
+      margin-top: 20px;
+      border-radius: 20px;
+      border: none;
+      border-bottom: 4px solid #23b436;
+      background: #077e37; 
+      font-size: 16px;
+      font-weight: 400;
+      color: #fff;
+      }
+      button:hover {
+      background: #065d26;
+      } 
+      h1 {
+      margin-top: 30;
+      font-style: bold;
+      font-size:1.5cm;
+      color:#23b436;
+      }
+
+      textarea {
+     
+      width: 50%;
+      padding: 15px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 20px;
+      
+      }
+
+    </style>
+</head>
+<body>
+    <h1 id="title">Honest feedback</h1>
+    <div>
+      <p>
+        One of an existing feedback: 
+      </p>
+      <h2 style="font-size: larger; font-style: italic;">"{{ random_feedback }}"</h2>
+      <br>
+     
+      <h2 style="color: #23b436;">Please share your feedback:</h2>
+      <form  style="justify-content: center;" id="survey-form" method="POST" action="/submit">
+        <div >
+         
+          <div style="justify-content: center;">
+            
+          
+          <textarea style="justify-content: center;" autofocus type="text" name="feedback" id="feedback" placeholder="Enter your feedback here..." rows="5" required></textarea>
+        </div>
+        </div>
+     
+        <button id="submit" type="submit">Submit</button>
+        <button id="reset" type="reset">Reset</button>
+      </form>
+    </div>
+
+
+
+
+
+   
+</body>
+</html>
